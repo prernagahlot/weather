@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="weather.css">
+    <title>Bootstrap demo</title>
+  </head>                 
+  <body>
+    <div class="content">
+    <h2 class="heading text-center ">Weather App</h2>
+    <h2 class="heading text-center ">Weather App</h2>
+</div>
+    
+    <div class="row tab-container text-center">
+
+        <div class="col-md-2">
+        <p class="tab" data-userWeather>Your Weather</p>
+        </div>
+          
+       
+
+        <div class="col-md-2">
+        <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+    </div>
+                <!---loading container-->
+        <div class="loading-container text-center">
+            <p>loading....</p>
+        </div>
+    <div class="weather-container">
+
+    <div class="grant-location-container justify-content-center text-center">
+
+        <!----Grant-location-container--->
+         <div class="row text-center justify-content-center">
+            <img src="map.png" class="img-fluid map" alt="">
+        <h2>Grant Location Access</h2>
+        <p>Allow access to get weather information</p>
+         <button class="btn" data-grant-access-btn>GRANT ACCESS</button>
+        </div>
+
+    </div>
+
+       <!--search for city-->
+
+    <form class=" form-container form" role="search"data-search-form action="">
+        <input class="form-control me-2" type="search" placeholder="Search For City" aria-label="Search" data-search-input>
+        <button class="btn btn-outline-success" type="submit"><span class="b-cont">Search</span></button>
+      </form>
+
+    <!---loading container-->
+ 
+
+   <!---show Weather-information-->
+   <div class="userWeatherInfo">
+
+    <div class="cityname d-flex justify-content-center">
+        <h3 data-city-name></h2>
+        <img data-country-icon class="img-fluid city-icon">
+    </div>
+
+    <h4 data-weather-disc class="text-center"></h4>
+    <img weatherIcon class="img-fluid ">
+
+    <p data-temp></p>
+
+    <!---3cards-->
+    <div class="parameter-container row justify-content-center text-center">
+<div class="parameter col-md-3">
+    <img src="windsp2.png" class="img-fluid cards">
+    <p>windspeed</p>
+    <p data-windspeed></p>
+</div>
+
+<div class="parameter col-md-3">
+    <img src="hum.png" class="img-fluid cards">
+    <p>humidity</p>
+   
+    <p data-humity></p>
+</div>
+
+<div class="parameter col-md-3">
+    <img src="clouds.png" alt="" class="img-fluid cards">
+    <p>clouds</p>
+    <p data-clouds></p>
+</div>
+    </div>
+   
+
+
+</div>
+    </div>
+
+
+  </body>
+
+  <script src="weather.js"></script>
+</html>
+
